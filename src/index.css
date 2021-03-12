@@ -8,3 +8,12 @@
 * {
   font-family: 'Fraunces'
 }
+
+@layer base {
+  [type='email'],
+  [type='text'],
+  [type='password'],
+  select {
+    @apply w-full border-gray-400 rounded-lg shadow-sm
+  }
+}
