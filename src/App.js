@@ -1,8 +1,8 @@
-import SignIn from './components/auth/SignIn'
+import ImageSlider from './components/slider/ImageSlider'
 function App() {
   return (
     <div className="">
-      <SignIn />
+      <ImageSlider />
     </div>
   );
 }
