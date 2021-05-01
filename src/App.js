@@ -3,8 +3,7 @@ import Layout from './components/navbar/Layout'
 import ImageSlider from './components/slider/ImageSlider'
 import { ImageData } from './components/slider/ImageData'
 
-import CardScreen from './components/framer_motion/advanced_animations/fade/CardScreen'
-import FramerMotionCards from './components/framer_motion/colours_and_fonts'
+import FramerMotionCourse from './components/framer_motion/index'
 
 function App() {
   return (
@@ -19,8 +18,7 @@ function App() {
           </Route>
           <Route path='/fm'>
             <div className='my-5'>
-              <FramerMotionCards />
-              <CardScreen />
+              <FramerMotionCourse />
             </div>
           </Route>
         </Switch>
