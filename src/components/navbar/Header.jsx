@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Header() {
   const [framerMotionDropdownMenu, setFramerMotionDropdownMenu] = useState(false)
@@ -20,14 +20,14 @@ export default function Header() {
         <div>
           <ul className='flex'>
             <li className='text-white mx-2 hover:border-b-2 hover:border-white hover:text-indigo-50 hover:scale-110 cursor-pointer'>
-              <Link to='/carousel'>
+              <NavLink to='/carousel'>
                 Carousel
-              </Link>
+              </NavLink>
             </li>
-            <li className='relative mx-2 text-white hover:border-b-2 hover:border-white hover:text-indigo-50 hover:scale-110 cursor-pointer' onMouseEnter={() => setFramerMotionDropdownMenu(true)} onMouseOut={() => setFramerMotionDropdownMenu(false)} onClick={() => setFramerMotionDropdownMenu(!framerMotionDropdownMenu)}>
-              <Link to='/fm'>
+            <li className='relative mx-2 text-white hover:border-b-2 hover:border-white hover:text-indigo-50 hover:scale-110 cursor-pointer' onClick={() => setFramerMotionDropdownMenu(!framerMotionDropdownMenu)}>
+              <NavLink to='/fm'>
                 Framer Motion
-              </Link>
+              </NavLink>
               {framerMotionDropdownMenu && <ul className='absolute mt-2 w-48 bg-white rounded-md shadow-xl hover:rounded-md'>
                 <li className='block px-4 py-2 text-gray-600 hover:bg-indigo-600 hover:rounded-md hover:text-white '>
                   <Link>Fade</Link>
