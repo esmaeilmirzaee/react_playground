@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext'
 
 export default function Header() {
   const [framerMotionDropdownMenu, setFramerMotionDropdownMenu] = useState(false)
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
   return (
     <nav>
       <div className='flex items-center bg-indigo-700 w-screen h-full mb-4 justify-between'>
         {/* brand/logo */}
-        <a href='/'>
+        <Link to='/'>
           <div className='flex items-center mx-2 py-1 cursor-pointer'>
             <img className='rounded-full shadow-2xl' src='https://esmaeilmirzaee.herokuapp.com/static/img/my__avatar.svg' width='64' height='64' />
             <div className='mx-2'>
@@ -15,7 +17,7 @@ export default function Header() {
               <p className='text-sm text-white font-light'>React Playground</p>
             </div>
           </div>
-        </a>
+        </Link>
         {/* nav items */}
         <div>
           <ul className='flex'>
@@ -44,7 +46,16 @@ export default function Header() {
 
         </div>
         {/* buttons */}
-        <div></div>
+        {/* AuthContext usage */}
+        {isLoggedIn ?
+          <div className='px-5 py-2 hover:text-white hover:bg-indigo-800 border-2 rounded-full mr-4 bg-white text-indigo-900' onClick={() => setIsLoggedIn(!isLoggedIn)}>
+            Sign Out
+          </div>
+          :
+          <div className='px-5 py-2 text-white font-bold border-2 rounded-full mr-4 hover:bg-white hover:text-indigo-900' onClick={() => setIsLoggedIn(!isLoggedIn)}>
+            Sign In
+          </div>
+        }
       </div>
     </nav>
   )

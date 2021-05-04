@@ -6,31 +6,35 @@ import { ImageData } from './components/slider/ImageData'
 import FramerMotionCourse from './components/framer_motion/index'
 import Blogs from './components/blogs/index'
 
+// Context
+import { AuthContextProvider } from './context/AuthContext'
+
 function App() {
   return (
-    <Router>
-      <Layout />
-      <div style={{ minHeight: '100vh' }}>
-        <Switch>
-          <Route exact path='/carousel'>
-            <div className="my-10">
-              <ImageSlider slides={ImageData} />
-            </div>
-          </Route>
-          <Route path='/fm'>
-            <div className='my-5'>
-              <FramerMotionCourse />
-            </div>
-          </Route>
-          <Route path='/blogs'>
-            <div className='my-5'>
-              <Blogs />
-            </div>
-          </Route>
-        </Switch>
-      </div>
-
-    </Router>
+    <AuthContextProvider>
+      <Router>
+        <Layout />
+        <div style={{ minHeight: '100vh' }}>
+          <Switch>
+            <Route exact path='/carousel'>
+              <div className="my-10">
+                <ImageSlider slides={ImageData} />
+              </div>
+            </Route>
+            <Route path='/fm'>
+              <div className='my-5'>
+                <FramerMotionCourse />
+              </div>
+            </Route>
+            <Route path='/blogs'>
+              <div className='my-5'>
+                <Blogs />
+              </div>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </AuthContextProvider>
 
   );
 }
