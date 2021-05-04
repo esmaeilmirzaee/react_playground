@@ -10,6 +10,7 @@
 3. React Router Course
    1. Relative Paths
    2. Authentication
+   3. Two types of history is available. The first one is provided by browser that is accessible through `wondow.history` and the other one is available via `react-router-dom`. 
 4. Framer Motion
 5. VideoJS
    1. https://www.pexels.com/video/playing-a-vinyl-record-on-a-spinning-turntable-2984380/
