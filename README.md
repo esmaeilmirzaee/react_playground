@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/esmaeilmirzaee/react_playground)
+
 # React Playground
 
 > Simply put, this is my play ground to experience `React` and `Tailwindcss`.  
