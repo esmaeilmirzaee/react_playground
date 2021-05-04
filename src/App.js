@@ -8,6 +8,7 @@ import Blogs from './components/blogs/index'
 
 // Context
 import { AuthContextProvider } from './context/AuthContext'
+import Admin from './components/Admin'
 
 function App() {
   return (
@@ -29,6 +30,11 @@ function App() {
             <Route path='/blogs'>
               <div className='my-5'>
                 <Blogs />
+              </div>
+            </Route>
+            <Route path='/admin'>
+              <div className='my-5'>
+                <Admin />
               </div>
             </Route>
           </Switch>

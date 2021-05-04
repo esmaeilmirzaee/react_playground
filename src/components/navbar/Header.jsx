@@ -43,13 +43,17 @@ export default function Header() {
               <NavLink to='/blogs' className='active:bg-white active:text-indigo-500'>Blogs</NavLink>
             </li>
           </ul>
-
         </div>
         {/* buttons */}
         {/* AuthContext usage */}
         {isLoggedIn ?
-          <div className='px-5 py-2 hover:text-white hover:bg-indigo-800 border-2 rounded-full mr-4 bg-white text-indigo-900' onClick={() => setIsLoggedIn(!isLoggedIn)}>
-            Sign Out
+          <div className='flex items-center'>
+            <Link to='/admin'>
+              <img className='rounded-full w-10 h-10 mx-2 cursor-pointer ' src='https://images.unsplash.com/photo-1620097064445-1a64d19ff2f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80' />
+            </Link>
+            <div className='px-5 py-2 hover:text-white hover:bg-indigo-800 border-2 rounded-full mr-4 bg-white text-indigo-900' onClick={() => setIsLoggedIn(!isLoggedIn)}>
+              Sign Out
+            </div>
           </div>
           :
           <div className='px-5 py-2 text-white font-bold border-2 rounded-full mr-4 hover:bg-white hover:text-indigo-900' onClick={() => setIsLoggedIn(!isLoggedIn)}>
