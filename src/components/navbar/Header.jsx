@@ -19,7 +19,7 @@ export default function Header() {
         {/* nav items */}
         <div>
           <ul className='flex'>
-            <li className='text-white mx-2 hover:border-b-2 hover:border-white hover:text-indigo-50 hover:scale-110 cursor-pointer'>
+            <li className='text-white mx-2 hover:border-b-2 hover:border-white hover:text-indigo-50 hover:scale-110 cursor-pointer' onClick={() => setFramerMotionDropdownMenu(false)}>
               <NavLink to='/carousel'>
                 Carousel
               </NavLink>
@@ -36,6 +36,9 @@ export default function Header() {
                   <Link>Fade 1</Link>
                 </li>
               </ul>}
+            </li>
+            <li className='text-white cursor-pointer mx-2' onClick={() => setFramerMotionDropdownMenu(false)}>
+              <NavLink to='/blogs'>Blogs</NavLink>
             </li>
           </ul>
 
