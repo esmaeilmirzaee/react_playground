@@ -10,6 +10,7 @@ import Blogs from './components/blogs/index'
 import { AuthContextProvider } from './context/AuthContext'
 import Admin from './components/Admin'
 import PrivateRoute from './components/PrivateRoute'
+import PrivateRouteComponent from './components/PrivateRouteComponent'
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
                 <Admin />
               </div>
             </PrivateRoute>
+
+            {/* Component property based private route. */}
+            <PrivateRouteComponent path='/dashboard' component={Admin} />
           </Switch>
         </div>
       </Router>

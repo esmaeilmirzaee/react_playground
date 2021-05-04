@@ -27,6 +27,8 @@
    13. https://player.vimeo.com/external/310349836.sd.mp4?s=1704e92642f13dc2aeb2669da761ef00d59e4d6e&profile_id=164&oauth2_token_id=57447761
    14. https://www.pexels.com/video/video-of-people-walking-855564/
    15. https://www.pexels.com/video/couple-walking-on-a-beach-filmed-with-a-drone-857268/
+   16. https://www.pexels.com/video/a-ripe-yellow-banana-fruits-in-motion-2872758/
+   17. https://www.pexels.com/video/aerial-shot-of-land-856477/
 
 ## Credits
 1. [Tailwindcss](https://tailwindcss.com/)
