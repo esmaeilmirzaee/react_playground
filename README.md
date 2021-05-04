@@ -7,6 +7,10 @@
 ## Projects
 1. Auth screen
 2. Carousel: __an image slider__
+3. React Router Course
+   1. Relative Paths
+   2. Authentication
+4. Framer Motion
 
 
 ## Credits

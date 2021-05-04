@@ -38,7 +38,7 @@ export default function Header() {
               </ul>}
             </li>
             <li className='text-white cursor-pointer mx-2' onClick={() => setFramerMotionDropdownMenu(false)}>
-              <NavLink to='/blogs'>Blogs</NavLink>
+              <NavLink to='/blogs' className='active:bg-white active:text-indigo-500'>Blogs</NavLink>
             </li>
           </ul>
 
