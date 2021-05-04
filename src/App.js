@@ -9,6 +9,7 @@ import Blogs from './components/blogs/index'
 // Context
 import { AuthContextProvider } from './context/AuthContext'
 import Admin from './components/Admin'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
@@ -32,11 +33,12 @@ function App() {
                 <Blogs />
               </div>
             </Route>
-            <Route path='/admin'>
+            {/* Version 2: Using customised components to check authentication */}
+            <PrivateRoute path='/admin'>
               <div className='my-5'>
                 <Admin />
               </div>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </div>
       </Router>

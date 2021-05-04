@@ -5,9 +5,7 @@ import { AuthContext } from '../context/AuthContext'
 
 export default function Admin() {
   const { isLoggedIn } = useContext(AuthContext)
-  if (!isLoggedIn) {
-    return <Redirect to='/' />
-  }
+
   return (
     <>
       {/* Sample Dashboard */}
