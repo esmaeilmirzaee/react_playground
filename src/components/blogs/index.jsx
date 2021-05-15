@@ -2,6 +2,9 @@ import { Link, Switch, Route, useRouteMatch } from 'react-router-dom';
 import FirstPost from './contents/FirstPost'
 import AnotherPost from './contents/AnotherPost'
 
+// Hooks - useReducer to show posts
+import Posts from '../hooks/Posts'
+
 export default function Blogs() {
   const { path, url } = useRouteMatch();
   console.log(path, url)
@@ -25,7 +28,7 @@ export default function Blogs() {
       {/* Switch */}
       <Switch>
         <Route path={`${path}/first_post`}>
-          <FirstPost />
+          <Posts />
         </Route>
         <Route path={`${path}/second_post`}>
           <AnotherPost />
