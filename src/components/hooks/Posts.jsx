@@ -1,5 +1,5 @@
-import { useState, useReducer } from 'react'
-
+import { useState, useEffect, useReducer } from 'react'
+import axios from 'axios'
 const allPosts = new Array(25).fill(0).map((_val, idx) => idx + 1)
 const perPage = 10;
 
@@ -10,6 +10,8 @@ const initialValues = {
   posts: [],
   after: 0
 }
+
+// 
 
 // reducer function
 const reducer = (state, action) => {
@@ -34,7 +36,19 @@ const Posts = () => {
   // const [posts] = useState(allPosts.slice(0, perPage))
   const [state, dispatch] = useReducer(reducer, initialValues)
   const { loading, posts, more, after } = state;
-  const handleClick = () => {
+
+  // Should be deleted
+  useEffect(() => {
+    setTimeout(async () => {
+      let data = await axios.get('http://localhost:8000/api')
+      if (data) {
+        // setPosts(data.posts)
+        // setIsLoading(data.loading)
+      }
+    }, 1000)
+  }, [])
+
+  const handleLoad = () => {
     dispatch({ type: 'start' })
     dispatch({ type: 'loaded', payload: allPosts.slice(after, after + perPage) })
   }
@@ -48,7 +62,7 @@ const Posts = () => {
 
         {loading && (<div>loading...</div>)}
 
-        {!loading && more && (<div className='cursor-pointer px-4 py-2 text-white bg-red-500' onClick={handleClick}>Load More</div>)}
+        {!loading && more && (<div className='cursor-pointer px-4 py-2 text-white bg-red-500' onClick={handleLoad}>Load More</div>)}
 
       </div>
     </>
