@@ -15,10 +15,11 @@
    1. Relative Paths
    2. Authentication
    3. Two types of history is available. The first one is provided by browser that is accessible through `wondow.history` and the other one is available via `react-router-dom`. 
-4. Framer Motion: __A course to use Framer Motion__ *TODO: Is Not Complete Yet*
-5. English Vocabulary: Display and show cards to teach English vocabulary. Also, allow to add cards easyly.
-6. Framer Motion
-7. VideoJS
+4. Rect Hooks course
+5. Framer Motion: __A course to use Framer Motion__ *TODO: Is Not Complete Yet*
+6. English Vocabulary: Display and show cards to teach English vocabulary. Also, allow to add cards easyly.
+7. Framer Motion
+8. VideoJS
    1. https://www.pexels.com/video/playing-a-vinyl-record-on-a-spinning-turntable-2984380/
    2. https://www.pexels.com/video/aerial-footage-of-a-colorful-lights-in-the-street-at-night-3108018/
    3. https://www.pexels.com/video/male-hands-typing-on-laptop-5592438/
