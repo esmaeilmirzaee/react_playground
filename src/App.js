@@ -12,7 +12,15 @@ import Admin from './components/Admin'
 import PrivateRoute from './components/PrivateRoute'
 import PrivateRouteComponent from './components/PrivateRouteComponent'
 
+// Key bindings
+import { useKey } from './hooks/useKey'
+
 function App() {
+  const slashHandler = () => {
+    console.log('Slash pressed.')
+  }
+  useKey('Slash', slashHandler)
+
   return (
     <AuthContextProvider>
       <Router>
