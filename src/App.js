@@ -15,6 +15,9 @@ import PrivateRouteComponent from './components/PrivateRouteComponent'
 // Key bindings
 import { useKey } from './hooks/useKey'
 
+// Pagination hooks
+import {Posts} from './components/posts/'
+
 function App() {
   const slashHandler = () => {
     console.log('Slash pressed.')
@@ -41,6 +44,9 @@ function App() {
               <div className='my-5'>
                 <Blogs />
               </div>
+            </Route>
+            <Route path='/posts'>
+              <Posts />
             </Route>
             {/* Version 2: Using customised components to check authentication */}
             <PrivateRoute path='/admin'>
