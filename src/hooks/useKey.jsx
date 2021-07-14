@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+// a hook to response to key shortcuts
 export const useKey = (key, cb) => {
   const callbackRef = useRef(cb);
 
