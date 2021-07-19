@@ -1,34 +1,44 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Layout from './components/navbar/Layout'
-import ImageSlider from './components/slider/ImageSlider'
-import { ImageData } from './components/slider/ImageData'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Layout from './components/navbar/Layout';
+import ImageSlider from './components/slider/ImageSlider';
+import { ImageData } from './components/slider/ImageData';
 
-import FramerMotionCourse from './components/framer_motion/index'
-import Blogs from './components/blogs/index'
+import FramerMotionCourse from './components/framer_motion/index';
+import Blogs from './components/blogs/index';
 
 // Context
-import { AuthContextProvider } from './context/AuthContext'
-import Admin from './components/Admin'
-import PrivateRoute from './components/PrivateRoute'
-import PrivateRouteComponent from './components/PrivateRouteComponent'
+import { AuthContextProvider } from './context/AuthContext';
+import Admin from './components/Admin';
+import PrivateRoute from './components/PrivateRoute';
+import PrivateRouteComponent from './components/PrivateRouteComponent';
 
 // Key bindings
-import { useKey } from './hooks/useKey'
+import { useKey } from './hooks/useKey';
+
+import { Charts } from './components/tooltips/index';
 
 function App() {
   const slashHandler = () => {
-    console.log('Slash pressed.')
-  }
-  useKey('Slash', slashHandler)
+    console.log('Slash pressed.');
+  };
+  useKey('Slash', slashHandler);
 
   return (
     <AuthContextProvider>
       <Router>
         <Layout />
+        <div className='flex justify-center align-center'>
+          <div className='inline'>
+            <button className='px-5 py-2 bg-indigo-100 rounded-md'>
+              Start
+            </button>
+          </div>
+          <Charts />
+        </div>
         <div style={{ minHeight: '100vh' }}>
           <Switch>
             <Route exact path='/carousel'>
-              <div className="my-10">
+              <div className='my-10'>
                 <ImageSlider slides={ImageData} />
               </div>
             </Route>
@@ -55,7 +65,6 @@ function App() {
         </div>
       </Router>
     </AuthContextProvider>
-
   );
 }
 
