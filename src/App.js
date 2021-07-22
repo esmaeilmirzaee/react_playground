@@ -15,6 +15,9 @@ import PrivateRouteComponent from './components/PrivateRouteComponent'
 // Key bindings
 import { useKey } from './hooks/useKey'
 
+// Charts
+import {Charts}from './components/charts/'
+
 function App() {
   const slashHandler = () => {
     console.log('Slash pressed.')
@@ -42,6 +45,13 @@ function App() {
                 <Blogs />
               </div>
             </Route>
+            {/* Charts */}
+            <Route path='/charts'>
+              <div className='my-5'>
+                <Charts />
+              </div>
+            </Route>
+
             {/* Version 2: Using customised components to check authentication */}
             <PrivateRoute path='/admin'>
               <div className='my-5'>
