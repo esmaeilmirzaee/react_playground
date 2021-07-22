@@ -1,5 +1,13 @@
 import { useEffect, useRef } from 'react';
-import { select, scaleLinear, max, scaleBand, axisLeft, axisBottom } from 'd3';
+import {
+  select,
+  scaleLinear,
+  max,
+  scaleBand,
+  axisLeft,
+  axisBottom,
+  format,
+} from 'd3';
 
 const render = (data, custom) => {
   const xValue = (d) => d.name;
@@ -16,7 +24,7 @@ const render = (data, custom) => {
     .append('g')
     .attr(
       'transform',
-      `translate(${custom.margins.top}, ${custom.margins.right})`,
+      `translate(${custom.margins.top}, ${custom.margins.left})`,
     );
 
   // Scale
@@ -31,7 +39,17 @@ const render = (data, custom) => {
 
   // 4. Define axis
   // Y Axis
-  svg.append('g').call(axisLeft(yScale));
+  const yAxisFormatter = (num) => format('.3s')(num).replace('G', 'B');
+  svg
+    .append('g')
+    .call(
+      axisLeft(yScale)
+        .tickFormat(yAxisFormatter)
+        .tickSize(
+          `-${custom.width - custom.margins.left - custom.margins.right}`,
+        ),
+    )
+    .attr('color', 'gray');
 
   // X Axis
   svg
@@ -39,7 +57,7 @@ const render = (data, custom) => {
     .call(axisBottom(xScale))
     .attr(
       'transform',
-      `translate(${0},${
+      `translate(${0}, ${
         custom.height - custom.margins.left - custom.margins.right
       })`,
     );
