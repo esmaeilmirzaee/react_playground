@@ -1,48 +1,58 @@
 {
   "name": "Linux",
-  "level": 0,
+
   "children": [
     {
       "name": "Debian",
-      "level": 1,
+
+      "value": 50,
       "children": [
         {
           "name": "Ubuntu",
-          "level": 2,
+
+          "value": 100,
           "children": [
             {
               "name": "Kubuntu",
-              "level": 3,
+
+              "value": 33,
               "children": [
                 {
                   "name": "Ulteo",
-                  "level": 4
+
+                  "value": 33
                 },
                 {
                   "name": "Polippix",
-                  "level": 4
+
+                  "value": 33
                 },
                 {
                   "name": "Asturix",
-                  "level": 4
+
+                  "value": 33
                 }
               ]
             },
             {
               "name": "Edubuntu",
-              "level": 3
+
+              "value": 33
             },
             {
               "name": "Mint",
-              "level": 3,
+
+              "value": 33,
               "children": [
                 {
                   "name": "Commodore OS",
-                  "level": 4
+
+                  "value": 50
                 },
                 {
                   "name": "quantOS",
-                  "level": 4
+
+                  "value": 50
                 }
               ]
             }
@@ -52,35 +62,45 @@
     },
     {
       "name": "Red Hat",
-      "level": 1,
+
+      "value": 50,
       "children": [
         {
           "name": "Red Hat Enterprise",
-          "level": 2
+
+          "value": 100
         },
         {
           "name": "Fedora Core",
-          "level": 3,
+
+          "value": 100,
           "children": [
             {
               "name": "Fedora",
-              "level": 4,
+
+              "value": 100,
+
               "children": [
                 {
                   "name": "Moblin 2",
-                  "level": 5,
+
+                  "value": 100,
                   "children": [
                     {
                       "name": "MeeGo",
-                      "level": 6,
+
+                      "value": 100,
+
                       "children": [
                         {
                           "name": "Mer",
-                          "level": 7
+
+                          "value": 50
                         },
                         {
                           "name": "Tizen",
-                          "level": 7
+
+                          "value": 50
                         }
                       ]
                     }
