@@ -18,6 +18,9 @@ import { useKey } from './hooks/useKey';
 // Charts
 import { Charts } from './components/charts/';
 
+// Pagination hooks
+import {Posts} from './components/posts/'
+
 function App() {
   const slashHandler = () => {
     console.log('Slash pressed.');
@@ -45,11 +48,17 @@ function App() {
                 <Blogs />
               </div>
             </Route>
+
+
             {/* Charts */}
             <Route path='/charts'>
               <div className='my-5'>
                 <Charts />
               </div>
+            </Route>
+
+            <Route path='/posts'>
+              <Posts />
             </Route>
 
             {/* Version 2: Using customised components to check authentication */}
